@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/activity_margin"
-    tools:context=".EditDataActivity">
+    tools:context="com.example.android.bookstoreapp.EditDataActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,22 +20,36 @@
             android:layout_width="@dimen/default_width"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:orientation="vertical"
             android:paddingLeft="@dimen/default_padding">
 
             <EditText
                 android:id="@+id/edit_book_title"
                 style="@style/EditorFieldStyle"
-                android:hint="@string/hint_book_title"
                 android:inputType="textCapWords" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/author_name" />
+
+        <LinearLayout
+            android:layout_width="@dimen/default_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingLeft="@dimen/default_padding">
 
             <EditText
                 android:id="@+id/edit_author_name"
                 style="@style/EditorFieldStyle"
-                android:hint="@string/hint_author_name"
                 android:inputType="textCapWords" />
-
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -55,9 +69,9 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/decrement"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:onClick="decrement"
                 android:text="-" />
 
             <TextView
@@ -70,9 +84,9 @@
                 android:textColor="@color/text_color" />
 
             <Button
+                android:id="@+id/increment"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:onClick="increment"
                 android:text="+" />
         </LinearLayout>
     </LinearLayout>
@@ -95,7 +109,6 @@
             <EditText
                 android:id="@+id/edit_product_price"
                 style="@style/EditorFieldStyle"
-                android:hint="@string/hint_product_price"
                 android:inputType="number" />
         </LinearLayout>
     </LinearLayout>
@@ -107,26 +120,60 @@
 
         <TextView
             style="@style/CategoryStyle"
-            android:text="@string/supplier_data" />
+            android:text="@string/supplier_name" />
 
         <LinearLayout
             android:layout_width="@dimen/default_width"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:orientation="vertical"
             android:paddingLeft="@dimen/default_padding">
 
             <EditText
                 android:id="@+id/supplier_name"
                 style="@style/EditorFieldStyle"
-                android:hint="@string/hint_supplier_name"
                 android:inputType="textCapWords" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/supplier_phone" />
+
+        <LinearLayout
+            android:layout_width="@dimen/default_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingLeft="@dimen/default_padding">
 
             <EditText
                 android:id="@+id/supplier_phone_number"
                 style="@style/EditorFieldStyle"
-                android:hint="@string/hint_supplier_phone_number"
-                android:inputType="textCapWords" />
+                android:inputType="number" />
+
         </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_section_margin"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_button" />
+
+        <Button
+            android:id="@+id/order_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_button" />
     </LinearLayout>
 </LinearLayout>

@@ -1,18 +1,54 @@
 <resources>
     <string name="app_name">Book Store App</string>
-    <string name="product_name">Book</string>
-    <string name="hint_author_name">Author name</string>
-    <string name="hint_book_title">Book title</string>
-    <string name="hint_product_price">Price</string>
+
+    <string name="product_name">Book title</string>
+    <string name="author_name">Author name</string>
     <string name="product_price">Book price</string>
     <string name="product_quantity">Book quantity</string>
-    <string name="supplier_data">Supplier</string>
-    <string name="hint_supplier_name">Supplier name</string>
-    <string name="hint_supplier_phone_number">Supplier phone number</string>
+    <string name="supplier_name">Supplier name</string>
+    <string name="supplier_phone">Supplier phone</string>
     <string name="quantity_text">0</string>
-    <string name="action_save">Save</string>
+
     <string name="action_delete">Delete</string>
     <string name="insert_data">Insert Data</string>
     <string name="delete_all_data">Delete All Books</string>
     <string name="add_data">Add</string>
+
+    <string name="insert_product_failed">Error with saving product</string>
+    <string name="insert_product_successful">Product saved</string>
+    <string name="empty_view_title_text">There\'s nothing to show</string>
+    <string name="empty_view_subtitle_text">Add some product...</string>
+    <string name="editor_activity_title_new_product">Add a Product</string>
+    <string name="editor_activity_title_edit_product">Edit Product</string>
+    <string name="action_save">Save</string>
+    <string name="editor_update_product_successful">Product list updated</string>
+    <string name="editor_update_product_failed">Error with updating product</string>
+    <string name="editor_insert_product_successful">Product saved</string>
+    <string name="editor_insert_product_failed">Error with saving product</string>
+    <string name="editor_delete_product_failed">Error with deleting product</string>
+    <string name="editor_delete_product_successful">Product deleted</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_dialog_msg">Delete this product?</string>
+    <string name="delete">Delete</string>
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+    <string name="sale_button">SALE</string>
+    <string name="zero_quantity">0</string>
+    <string name="delete_button">Delete</string>
+    <string name="order_button">Order</string>
+    <string name="no_product">Run out</string>
+
+    <string name="product_name_required">Book title required</string>
+    <string name="author_name_required">Author name required</string>
+    <string name="price_required">Price required</string>
+    <string name="quantity_required">Quantity required</string>
+    <string name="supplier_name_required">Supplier name required</string>
+    <string name="phone_number_required">Phone number required</string>
+
+    <string name="name_sample">Everyday Super Food</string>
+    <string name="author_sample">Jamie Oliver</string>
+    <string name="price_sample">14390</string>
+    <string name="piece_sample">3</string>
+
 </resources>

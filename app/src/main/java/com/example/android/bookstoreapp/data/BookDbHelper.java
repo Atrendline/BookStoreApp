@@ -1,3 +1,6 @@
+/**
+ * Based on Udacity ABND course Pets App.
+ */
 package com.example.android.bookstoreapp.data;
 
 import android.content.Context;
@@ -24,7 +27,7 @@ public class BookDbHelper extends SQLiteOpenHelper {
                 + BookContract.BookEntry.COLUMN_BOOK_QUANTITY + " INTEGER NOT NULL DEFAULT 0, "
                 + BookContract.BookEntry.COLUMN_BOOK_PRICE + " INTEGER NOT NULL, "
                 + BookContract.BookEntry.COLUMN_SUPPLIER_NAME + " TEXT NOT NULL, "
-                + BookContract.BookEntry.COLUMN_SUPPLIER_PHONE_NUMBER + " TEXT NOT NULL);";
+                + BookContract.BookEntry.COLUMN_SUPPLIER_PHONE_NUMBER + " INTEGER NOT NULL);";
 
         db.execSQL( SQL_CREATE_BOOK_TABLE );
     }
