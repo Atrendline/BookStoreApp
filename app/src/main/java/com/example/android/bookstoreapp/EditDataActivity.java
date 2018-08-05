@@ -3,7 +3,6 @@
  */
 package com.example.android.bookstoreapp;
 
-import android.Manifest;
 import android.app.AlertDialog;
 import android.app.LoaderManager;
 import android.content.ContentValues;
@@ -223,6 +222,7 @@ public class EditDataActivity extends AppCompatActivity implements LoaderManager
                         Toast.LENGTH_SHORT ).show();
             }
         }
+        finish();
     }
 
     @Override
@@ -250,7 +250,6 @@ public class EditDataActivity extends AppCompatActivity implements LoaderManager
 
             case R.id.action_save:
                 saveBook();
-                finish();
                 return true;
 
             case android.R.id.home:
@@ -267,12 +266,12 @@ public class EditDataActivity extends AppCompatActivity implements LoaderManager
                                 NavUtils.navigateUpFromSameTask( EditDataActivity.this );
                             }
                         };
-
                 showUnsavedChangesDialog( discardButtonClickListener );
                 return true;
         }
-        return super.onOptionsItemSelected( item );
 
+
+        return super.onOptionsItemSelected( item );
     }
 
     @Override
@@ -415,14 +414,13 @@ public class EditDataActivity extends AppCompatActivity implements LoaderManager
     }
 
     public void orderBook() {
-        Intent orderIntent = new Intent( Intent.ACTION_DIAL );
-        orderIntent.setData( Uri.parse( "tel:" + "+3680254274" ) );
-
-        if (ActivityCompat.checkSelfPermission( this, Manifest.permission.CALL_PHONE ) != PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText( this, "Please check your settings.", Toast.LENGTH_LONG ).show();
-            return;
-
+        if (ActivityCompat.checkSelfPermission(
+                this, android.Manifest.permission.CALL_PHONE ) !=
+                PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions( this, new
+                    String[]{android.Manifest.permission.CALL_PHONE}, 0 );
+        } else {
+            startActivity( new Intent( Intent.ACTION_CALL, Uri.parse( "tel:" + mSupplierPhoneNumberEditText ) ) );
         }
-        startActivity( orderIntent );
     }
 }
